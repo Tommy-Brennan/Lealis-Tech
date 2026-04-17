@@ -1,29 +1,68 @@
+<section class="banner">
+    <div class="banner-container">
+        <h1>Get in Touch</h1>
+        <p>We'd love to hear from you! Whether you have questions, feedback, or just want to say hello, feel free to reach out to us.</p>
+    </div>
+</section>
 <section class="contact">
     <div class="contact-container">
-        <h1>Get in Touch</h1>
         <div class="contact-info">
-            <p>If you have any questions or would like to get in touch, please feel free to contact us:</p>
-            <ul>
-                <li>Email: thomas.brennan@lealisTech.com </li>
-                <li>Phone: 301-000-0000</li>
-            </ul>
+            <div class="call-container">
+                <h2>Give us a call.</h2>
+                <h2>1-123-456-7890</h2>
+            </div>
+            <div class="feedback-container">
+                <h2>Leave us some feedback.</h2>
+                <p>We value your input and would love to hear about your experience with our products or services.</p>
+            </div>
         </div>
+        
         <div class="form-container">
             <form>
-                <label for="firstName">First Name:</label>
-                <input type="text" id="firstName" name="firstName" required>
+                <div class="name-row">
+                    <div class="name-field">
+                        <div class="input-group">
+                            <input type="text" id="firstName" name="firstName" placeholder=" " required>
+                            <label for="firstName">* First Name</label>
+                        </div>
+                    </div>
+                    <div class="name-field">
+                        <div class="input-group">
+                            <input type="text" id="lastName" name="lastName" placeholder=" " required>
+                            <label for="lastName">* Last Name</label>
+                        </div>
+                    </div>
+                </div>
 
-                <label for="lastName">Last Name:</label>
-                <input type="text" id="lastName" name="lastName" required>
+                <div class="input-group">
+                    <input type="text" id="company" name="company" placeholder=" ">
+                    <label for="company">Company Name</label>
+                </div>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <div class="name-row">
+                    <div class="name-field">
+                        <div class="input-group">
+                            <input type="text" id="role" name="role" placeholder=" ">
+                            <label for="role">Your Role/Title</label>
+                        </div>
+                    </div>
+                    <div class="name-field">
+                        <div class="input-group">
+                            <input type="text" id="phone" name="phone" placeholder=" ">
+                            <label for="phone">Phone #</label>
+                        </div>
+                    </div>
+                </div>
 
-                <label for="phone">Phone:</label>
-                <input type="tel" id="phone" name="phone">
+                <div class="input-group">
+                    <input type="email" id="email" name="email" placeholder=" " required>
+                    <label for="email">* Email</label>
+                </div>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+                <div class="input-group">
+                    <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+                    <label for="message">* Message</label>
+                </div>
 
                 <button type="submit">Submit</button>
             </form>

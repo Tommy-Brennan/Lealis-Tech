@@ -2,22 +2,29 @@
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  background-color: #0f172a;
+  position: sticky;
+  top: 0;
+  background-color: $secondary-color;
   color: #f8fafc;
 
   .logo {
-    margin-left: 2rem;
-    
+    position: absolute;
+    left: 2rem;
+
     img {
       height: 4rem;
-      width: auto;}
+      width: auto;
+    }
   }
 
   .nav-links {
     list-style: none;
     display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    gap: 2rem;
 
     li a {
       display: inline-block;
@@ -29,8 +36,6 @@
       background: transparent;
       transition-duration: 0.3s;
       padding: 2rem 3rem;
-      margin-top: -1rem;
-      margin-bottom: -1rem;
 
       &:hover {
         background: linear-gradient(135deg, #0f2352, #203352);
