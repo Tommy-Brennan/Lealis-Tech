@@ -1,23 +1,30 @@
+@use '../../_variables' as *;
+
 .hero {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   text-align: center;
-  background: linear-gradient(135deg, #0f172a, #1e293b);
+  background: $main-background;
   color: #f8fafc;
   padding: 0 20px;
+  font-family: $primary-font;
 
   .hero-content {
-    max-width: 600px;
+    max-width: 1000px;
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
+    .hero-logo {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      width: 100%; /* adjust to taste */
+      margin-top: -15rem;
     }
 
     p {
-      font-size: 1.2rem;
+      font-size: 2rem;
+      margin-top: -10rem;
       margin-bottom: 2rem;
       color: #cbd5e1;
     }

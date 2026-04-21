@@ -1,28 +1,46 @@
+@use '../../../_variables' as *;
+
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #0f172a;
+  position: sticky;
+  top: 0;
+  background-color: $secondary-color;
   color: #f8fafc;
 
   .logo {
-    font-weight: bold;
-    font-size: 1.5rem;
+    position: absolute;
+    left: 2rem;
+
+    img {
+      height: 4rem;
+      width: auto;
+    }
   }
 
   .nav-links {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
+    flex-direction: row;
+    margin: 0 auto;
+    gap: 2rem;
 
     li a {
+      display: inline-block;
       color: #f8fafc;
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 300;
+      font-size: 1.5rem;
+      font-family: $primary-font;
+      background: transparent;
+      transition-duration: 0.3s;
+      padding: 2rem 3rem;
 
       &:hover {
-        color: #3b82f6;
+        background: linear-gradient(135deg, #0f2352, #203352);
+        box-shadow: #0f172a 0px 5px 15px;
+        color: $primary-color;
       }
     }
   }
