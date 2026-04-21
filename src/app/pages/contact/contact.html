@@ -22,49 +22,51 @@
                 <div class="name-row">
                     <div class="name-field">
                         <div class="input-group">
-                            <input type="text" formControlName="firstName" placeholder=" " required>
+                            <input type="text" formControlName="firstName" required>
                             <label for="firstName">* First Name</label>
                         </div>
                     </div>
                     <div class="name-field">
                         <div class="input-group">
-                            <input type="text" formControlName="lastName" placeholder=" " required>
+                            <input type="text" formControlName="lastName" required>
                             <label for="lastName">* Last Name</label>
                         </div>
                     </div>
                 </div>
 
                 <div class="input-group">
-                    <input type="text" id="company" name="company" placeholder=" ">
+                    <input type="text" formControlName="company">
                     <label for="company">Company Name</label>
                 </div>
 
                 <div class="name-row">
                     <div class="name-field">
                         <div class="input-group">
-                            <input type="text" id="role" name="role" placeholder=" ">
+                            <input type="text" formControlName="role">
                             <label for="role">Your Role/Title</label>
                         </div>
                     </div>
                     <div class="name-field">
                         <div class="input-group">
-                            <input type="text" id="phone" name="phone" placeholder=" ">
+                            <input type="text" formControlName="phone">
                             <label for="phone">Phone #</label>
                         </div>
                     </div>
                 </div>
 
                 <div class="input-group">
-                    <input type="email" formControlName="email" placeholder=" " required>
+                    <input type="email" formControlName="email" required>
                     <label for="email">* Email</label>
                 </div>
 
                 <div class="input-group">
-                    <textarea id="message" formControlName="message" rows="5" placeholder=" " required></textarea>
+                    <textarea formControlName="message" rows="5" required></textarea>
                     <label for="message">* Message</label>
                 </div>
 
-                <button type="submit">Submit</button>
+                <button type="submit" [disabled]="isSending">
+                    {{ isSending ? 'Sending...' : 'Submit' }}
+                </button>
             </form>
         </div>
     </div>
