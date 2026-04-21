@@ -131,10 +131,18 @@
 }
 
 .form-container button {
-  width: 100%;
-  padding: 10px 12px;
+  width: 104%;
+  padding: 15px 15px;
   border-radius: 6px;
   border: none;
+  background: $primary-color;
+  color: #f8fafc;
+  font-size: 1.25rem;
+  cursor: pointer;
+
+  &:hover {
+    background: darken($primary-color, 10%);
+  }
 }
 
 .name-row {
