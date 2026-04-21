@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
@@ -12,7 +12,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 export class Contact {
   contactForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private httpClient: HttpClient) {
+  constructor(private formBuilder: FormBuilder, private http: HttpClient) {
     this.contactForm = this.formBuilder.group({
       firstName: [''],
       lastName: [''],
@@ -24,10 +24,10 @@ export class Contact {
   onSubmit() {
   const formData = this.contactForm.value;
 
-  this.httpClient.post('/api/send-email', formData)
+  this.http.post('/api/send-email', formData)
     .subscribe({
       next: () => alert('Message sent!'),
       error: () => alert('Something went wrong')
     });
-}
+  }
 }
