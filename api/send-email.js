@@ -13,7 +13,7 @@ export default async function handler(req, res) {
 
   try {
     await resend.emails.send({
-      from: 'devTeam@lealisTech.com',
+      from: 'onboarding@resend.dev',
       to: 'tommybrennan11@gmail.com',
       subject: 'testing form submission',
       html: `
@@ -23,6 +23,8 @@ export default async function handler(req, res) {
         <p>${message}</p>
       `
     });
+
+    console.log("RESEND RESULT:", result);
 
     res.status(200).json({ success: true });
   } catch (error) {
