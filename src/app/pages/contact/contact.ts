@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { EmailService } from './email.service';
+import { EmailService } from '../../core/services/email.service';
 
 @Component({
   selector: 'app-contact',

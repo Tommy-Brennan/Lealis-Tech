@@ -1,15 +1,17 @@
 import { Injectable } from '@angular/core';
-import emailjs from '@emailjs/browser';
+import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
+import { IContactForm } from './models/IContactForm';
+import { EMAIL_SERVICE_CONSTANTS } from './models/emailServiceConstants';
 
 @Injectable({
   providedIn: 'root',
 })
 export class EmailService {
-  private serviceId = 'service_pmhlebk';
-  private templateId = 'template_upft6wg';
-  private publicKey = 'NKvtNPp94nO2pgGPO';
+  private serviceId: string = EMAIL_SERVICE_CONSTANTS.SERVICE_ID;
+  private templateId: string = EMAIL_SERVICE_CONSTANTS.TEMPLATE_ID;
+  private publicKey: string = EMAIL_SERVICE_CONSTANTS.PUBLIC_KEY;
 
-  sendEmail(form: any) {
+  sendEmail(form: IContactForm): Promise<EmailJSResponseStatus> {
     if (!form) throw new Error('Form is required');
 
     const templateParams = {
